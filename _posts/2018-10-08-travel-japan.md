@@ -3,7 +3,7 @@ layout: post
 title: "日本京都大阪七日自助游"
 subtitle: "Travelling to Osaka for 7 Days"
 author: "qsxx"
-header-img: "img/post-travel-japan.jpg.jpg"
+header-img: "img/post-bg-japan.jpg"
 header-mask: 0.4
 tags:
   - 旅行
@@ -19,7 +19,7 @@ tags:
 关键字： 京都 ；伏见稻荷神社；衹园；鸭川； 清水寺 ； 大阪 ； 奈良 ；心斋桥；有马；温泉；环球影城
 
 
-# 准备工作
+## 准备工作
 在出发前一个月，一些必须要提前预约/安排的项目，在国内就要陆续的做好。除了购汇要去银行外，其余基本上全部都可以通过万能的互联网搞定：
 1. 护照、签证；
 2. 机票、酒店；
