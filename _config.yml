@@ -103,11 +103,11 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "最是人间",
+        title: "学术博客",
         href: "http://homepage.fudan.edu.cn/wangcheng/"
     },
     {
-        title: "家居用品",
-        href: "http://shadow.chinacloudapp.cn"
+        title: "美丽汇",
+        href: "http://meilihui.ml"
     },
 ]
