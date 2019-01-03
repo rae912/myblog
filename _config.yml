@@ -1,11 +1,11 @@
 # Site settings
 title: Qsxx Blog
-SEOTitle: 青衫的博客 | Qsxx Blog
+SEOTitle: 青衫博客 | QingShan Talk
 header-img: img/home-bg.jpg
 email: rae@live.cn
 description: "关于程序与设计、黑客与画家"
 keyword: "博客, 个人网站, 互联网, Web, JavaScript"
-url: "https://qsxx.tk"              # your host, for absolute URL
+url: "https://qingshan.tk"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
