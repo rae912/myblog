@@ -3,7 +3,7 @@ layout: post
 title: "日本京都大阪七日自助游"
 subtitle: "Travelling to Osaka for 7 Days"
 author: "qsxx"
-header-img: "img/post-travel-japan.jpg"
+header-img: "img/post-bg-travel.jpg"
 header-mask: 0.4
 tags:
   - 旅行
