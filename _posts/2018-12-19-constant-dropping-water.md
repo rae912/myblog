@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "水滴石穿"
-subtitle: "constant dropping of water wears away a stone"
-author: "qsxx"
+subtitle: "Constant dropping of water wears away a stone"
+author: "qingshan"
 header-img: "img/post-bg-swing.jpeg"
 header-mask: 0.4
 tags:

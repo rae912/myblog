@@ -2,7 +2,7 @@
 layout: post
 title: "张艺谋电影《影》中决战剧情之我编"
 subtitle: "The plot in my mind for movie Shadow"
-author: "qsxx"
+author: "qingshan"
 header-img: "img/post-bg-ying.jpg"
 header-mask: 0.4
 tags:

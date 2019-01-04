@@ -2,7 +2,7 @@
 layout: post
 title: "日本京都大阪七日自助游"
 subtitle: "Travelling to Osaka for 7 Days"
-author: "qsxx"
+author: "qingshan"
 header-img: "img/post-bg-travel.jpg"
 header-mask: 0.4
 tags:

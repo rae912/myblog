@@ -2,7 +2,7 @@
 layout: post
 title: "新个税背后的大数据逻辑"
 subtitle: "The big data perspective of new personal income taxation"
-author: "qsxx"
+author: "qingshan"
 header-img: "img/post-bg-tax.jpg"
 header-mask: 0.4
 tags:
