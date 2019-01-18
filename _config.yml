@@ -14,7 +14,7 @@ future: true
 # SNS settings
 RSS: false
 weibo_username:     qsxxblog
-zhihu_username:     rae912
+zhihu_username:     python-23/columns
 github_username:    rae912
 #twitter_username:   huxpro
 #facebook_username:  huxpro
