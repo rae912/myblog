@@ -244,5 +244,5 @@ plt.tight_layout()
 plt.show()
 ```
 
-
+参考资料：https://imrankhan17.github.io/pages/Solving%20the%20secretary%20problem%20with%20Python.html
 
