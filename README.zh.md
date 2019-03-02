@@ -1,3 +1,3 @@
-# Qsxx blog 模板
+# 青衫说
 
-[Qsxx Blog](https://blog.qsxx.tk)
+[Qsxx Blog](https://qingshan.tk)

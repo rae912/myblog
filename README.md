@@ -1,3 +1,3 @@
 # Qsxx Blog
 
-[Qsxx Blog](https://blog.qsxx.tk)
+[Qsxx Blog](https://qingshan.tk)
