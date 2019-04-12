@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LeetCode001-TwoSum"
+title: "算法练习001-TwoSum"
 subtitle: "LeetCode001-TwoSum"
 author: "qingshan"
 header-img: "img/post-bg-halting.jpg"

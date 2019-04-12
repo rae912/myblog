@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LeetCode003-LongestSubstringWithoutRepeatingCharacters"
+title: "算法练习003-LongestSubstringWithoutRepeatingCharacters"
 subtitle: "LeetCode003-LongestSubstringWithoutRepeatingCharacters"
 author: "qingshan"
 header-img: "img/post-bg-halting.jpg"
