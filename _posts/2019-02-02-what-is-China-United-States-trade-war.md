@@ -71,8 +71,8 @@ tags:
 
 #### 2. 就业方向调整
 遇到贸易战所引起的宏观经济结构调整，许多就业岗位，特别是新兴的岗位将面临调整。常关注时事的朋友，应该感觉的出，这个冬天关于“裁员“的新闻和话题特别的多。其实源头如此。
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fzsbw80y3oj30m306omy7.jpg)
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fzsbv4w5dvj30n80620tq.jpg)
+![](https://ae01.alicdn.com/kf/HTB1XATxa._rK1Rjy0Fc762EvVXaF.png)
+![](https://ae01.alicdn.com/kf/HTB1SA6DaZ_vK1Rjy0Fo760IxVXaK.png)
 
 
 #### 3. 投资市场低迷

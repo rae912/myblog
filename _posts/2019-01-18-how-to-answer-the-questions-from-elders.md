@@ -42,7 +42,7 @@ tags:
 > 有一个数量为N个的自然数集合[A,B,C, ...,N]，一一对应着N个值的随机数集合[a,b,c, ... n]，即1对应着a，2对应着b，3对应着c，依次类推N对应着n。现设计一种方法，在只取一次的情况下，使取到最大值对应的自然数的概率最大。
 
 为了方便分析，我们令N=3，则自然数集合为[A,B,C]。最多可以尝试取三次，每次取值的可能的顺序情况如下：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fz9uts2p95j30kz036abw.jpg)
+![](https://ae01.alicdn.com/kf/HTB15EGAaUvrK1RjSspcq6zzSXXaD.jpg)
 
 假设，a>b>c，则A对应的就是最大值，那么不管用哪种顺序取，随机取得A的概率都是三分之一。
 
@@ -76,7 +76,7 @@ tags:
 从结果中可以看出，当N=100时，在大约将前35个元素设立为样本之后，取得最大值的概率最大约为36.7%。
 
 而在将结果可视化之后，可以更直观的观察，最优方案应该是在将前37个元素设立样本区间，得到最大化概率为36.79%。如图所示。
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fzaxdq6y53j30hd0afjrk.jpg)
+![](https://ae01.alicdn.com/kf/HTB1Gku.aULrK1Rjy0Fj762YXFXa0.png)
 
 当然，通过计算机暴力地计算出所有组合的概率，获得了最优解，但并没有普适性，还是应该利用数学的方法来求解有说服力。
 
@@ -85,11 +85,11 @@ tags:
 ### 证明：数学论证
 对于任意的截断值 r，最优值选被选中的概率是：
 
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fz9x9mfbwdj31b20a00vc.jpg)
+![](https://ae01.alicdn.com/kf/HTB1wtCPaLvsK1Rjy0Fiq6zwtXXa9.jpg)
 
 求和符号内概率的计算是基于：如果应聘者 i 是最佳人选，它被选中当且仅当头 i - 1 个候选中的最佳人选处在头 r - 1 个被拒绝的候选者中。令 n 趋近无穷大，把 x 表示为 r/n 的极限，令 t 为 i/n，dt 为 1/n，总和可以近似为如下积分：
 
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fz9xhp7da4j30lw04aq32.jpg)
+![](https://ae01.alicdn.com/kf/HTB10c_3azLuK1Rjy0Fhq6xpdFXad.jpg)
 
 其中，令 P(x) 对 x 的导数为 0，解出 x，x=1/e，最优截断值等于n/e（e为自然常数）。
 
@@ -103,7 +103,7 @@ tags:
 当然过年可不能对长辈亲朋说得这么直接，而是应该这样回答：
 **根据数学家的最优截止策略，我目前还不找对象/不结婚/不买房子/不买车子/不找工作/不换工作的原因是，为了找到/买到最好的，我还处于样本收集阶段。**
 
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fzaxgbwaj2j30b40b4gm0.jpg)
+![](https://ae01.alicdn.com/kf/HTB1hh6faLjsK1Rjy1Xaq6zispXaj.jpg)
 
 
 ### 题外拓展：什么是自然常数e？
@@ -117,7 +117,7 @@ tags:
 >* 旋涡星系的旋臂差不多是等角螺线。银河系的四大旋臂的倾斜度约为 12°
 >* 低气压(热带气旋、温带气旋等)的外观像等角螺线
 
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1fzawf1bfl7j30go0gomz3.jpg)
+![](https://ae01.alicdn.com/kf/HTB1jY98aJzvK1RkSnfoq6zMwVXar.jpg)
 
 还有细菌和野兔群体也在自然常数e的速率下繁殖能够最快速的扩大群体。所以自然常数e能够在个人问题上发挥作业，也是合情合理的。也许人类作为自然的一部分，也是受控于自然规律的呢。
 

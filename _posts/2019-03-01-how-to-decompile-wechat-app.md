@@ -69,14 +69,14 @@ node wuWxapkg.js {目标缓存}.wxapkg
 ```
 
 此时，应该有编译过程日志显示：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g0om1baqnvj31cu13aws6.jpg)
+![](https://ae01.alicdn.com/kf/HTB1Bf8CJNYaK1RjSZFnq6y80pXaj.jpg)
 
 尽管可以看到有错误提示，但是并不用紧张。当前目录下会出现与刚才缓存一样名字的文件夹。里面有一系列的前端工程文件，说明已经反编译成功了。
 
 #### 代码可视化
 由于只是观摩学习，所以需要能够比较直观的阅读。将代码导入到Webstorm新建工程，随意打开一个文件，可以发现代码是没有格式的，全部都缩在一起。而且，代码的变量名都是一个单字母的。所以要使用Webstorm的代码格式化功能格式化一下。
 
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g0om88johwj30ho0zowk0.jpg)
+![](https://ae01.alicdn.com/kf/HTB1MwpwJMHqK1RjSZJnq6zNLpXaI.jpg)
 
 在图中所示的code菜单下选择Reformat Code，片刻后，即可获取得到格式化之后的，适合阅读的代码了。
 

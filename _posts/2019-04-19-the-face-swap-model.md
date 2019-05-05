@@ -12,14 +12,14 @@ tags:
 
 
 某天，小伙伴给青衫分享了一个羞羞哒小视频，看封面怎么感觉有点眼熟呢？点开后的画风是这样子的：
-![](https://ww1.sinaimg.cn/large/007iUjdily1g1qq21cv7kg30dw074e81.gif)
+![](https://ae01.alicdn.com/kf/HTB1oYm0PxjaK1RjSZKz5jXVwXXah.gif)
 我去！这不是女神盖尔加朵（神奇女侠扮演者）吗？！什么情况？！
 
 青衫感觉事情肯定没这么简单。于是顺着视频上的水印找到了视频出处网站。这一下可真是发现了新大陆：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g286nd8y5fg309g07dq68.gif)
+![](https://ae01.alicdn.com/kf/HTB15nH8RSzqK1RjSZFj5jblCFXaG.gif)
 除了**盖尔·加朵，连泰勒·斯威夫特（歌手霉霉）、艾玛·沃特森（哈利波特里的女主）、斯嘉丽·约翰逊（复联黑寡妇）**的视频都有！连青衫非常喜欢的演员新垣结衣也不能幸免！
 
-![](https://ww1.sinaimg.cn/large/007iUjdily1g1qrhgdk0mj307705ewed.jpg)
+![](https://ae01.alicdn.com/kf/HTB1jiG6PxjaK1RjSZKzq6xVwXXaz.jpg)
 
 冷静下来之后，青衫通过查阅资料，得知原来这一切视频都是假的！都是通过**FakeFace**技术**伪造**的！
 
@@ -34,8 +34,8 @@ tags:
 而Faceswap-GAN是在前者的基础之上增加了Adversarial Loss和Perceptual Loss。其中Perceptual Loss    是用训练好的VGGFace网络（该网络不做训练）的参数做一个语义的比对。总体上利用GAN对抗网络来增强替换效果。
 
 它的原理示意图如下：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g2811fc011j30i00exn30.jpg)
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g2815155hoj30iw0lb0u4.jpg)
+![](https://ae01.alicdn.com/kf/HTB1dxOKRMTqK1RjSZPhq6xfOFXax.jpg)
+![](https://ae01.alicdn.com/kf/HTB1PzLxRSrqK1RjSZK9q6xyypXaH.jpg)
 
 从图中可以看出，想要将一个人的脸“换”到另一个人的身上，只需要三步：
 >* 第一步：提取原始素材里的人脸图像数据；
@@ -43,18 +43,18 @@ tags:
 >* 第三步：根据模型生成目标图像并逐帧覆盖；
 
 经过这一系列操作，就可以成功的进行“换脸”了，就像这样便可以将影帝尼古拉斯凯奇变成美帝总统啦：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g281ibiijkj30al0cr42j.jpg)
+![](https://ae01.alicdn.com/kf/HTB1LBzJRQvoK1RjSZPfq6xPKFXaU.jpg)
 
 ### 技术实践
 如果这一切你觉得有兴趣的话，国外有大神已经将这一切的程序封装成了傻瓜式的软件。只需要提供要替换人物的原始视频，就可以将其替换到其他的视频里面。软件的界面十分简洁，目的就是让没有基础的用户也能够使用。
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g2870nmdnzj30rs0fe3zg.jpg)
+![](https://ae01.alicdn.com/kf/HTB1p2wzRNjaK1RjSZKzq6xVwXXaP.jpg)
 ### 应用领域
 随着上面介绍到的软件在网上走红之后，许多动手能力强的同学已经着手开始“导演”各种让人脑洞大开的小视频了。例如杨幂"主演"的94版《射雕英雄传》，和各种明星客串的百变女主播。
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g281prsdpig30hs0a0hdu.gif)
+![](https://ae01.alicdn.com/kf/HTB1BMUbRNnaK1RjSZFt5jbC2VXas.gif)
 
 
 除了在娱乐领域应用这项技术用来看妹子以外，更让青衫感到惊讶的是有日本有位叫Kizashi Nakano的**“吃货”**小哥，居然将这项技术应用在了吃上面！可以将一碗素拉面瞬间零成本变成豪华海鲜拉面！转变后的画风是这样的：
-![](https://ww1.sinaimg.cn/large/007i4MEmgy1g2821vzc32g30d207cnpd.gif)
+![](https://ae01.alicdn.com/kf/HTB1.K_QRIbpK1RjSZFy5jX_qFXaI.gif)
 
 原来，这位小哥因为疾病，不能享受到海鲜拉面的美味。因此，在通过学习相关技术原理之后，于是就一头扎进了研究之中。现在，他开发的这套系统已经可以**将素面变成拉面或者炒面，将白米转换成咖喱饭或炒饭，可以在吃一种食物的时候体验到一种仿佛在吃另一种食物的味觉幻觉**。
 这个应用在可以遇见的未来，能够对厌食症病人带来巨大的福音。这可比看妹子什么的有意义多了！试想一下，当正在减肥的你忍不住想吃大餐的时候，运行小哥的这套程序，就可以将水果沙拉吃出啤酒炸鸡的味道，还不用担心减肥大计功亏一篑，该是多么美好的事情啊。

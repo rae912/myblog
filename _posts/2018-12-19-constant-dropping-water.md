@@ -30,5 +30,5 @@ tags:
 
 毕竟，这也许就是老马说的：量变引起质变吧。
 
-![](https://ww1.sinaimg.cn/large/007iUjdily1fyejstl44ej30h30rsdh6.jpg)
+![](https://ae01.alicdn.com/kf/HTB1hoIDaffsK1RjSszbq6AqBXXaz.jpg)
 
