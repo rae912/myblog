@@ -3,7 +3,7 @@ layout: post
 title: "五一舟山游记"
 subtitle: "Traveling to Zhoushan of Zhejiang"
 author: "qingshan"
-header-img: "img/post-bg-zhoushan.jpg"
+header-img: "img/post-bg-zhoushan-min.jpg"
 header-mask: 0.4
 tags:
   - 生活
