@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "算法练习003-LongestSubstringWithoutRepeatingCharacters"
-subtitle: "LeetCode003-LongestSubstringWithoutRepeatingCharacters"
+title: "算法练习004-Median of Two Sorted Arrays"
+subtitle: "LeetCode004-Median of Two Sorted Arrays"
 author: "qingshan"
 header-img: "img/post-bg-halting.jpg"
 header-mask: 0.4
