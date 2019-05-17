@@ -11,6 +11,7 @@ tags:
 ---
 
 最近工作中需要用到最新的Python3.7版在本地安装一切顺利，到准备在测试环境安装就发现了问题。装好python虚拟环境后，运行程序，发现报错。好像是与模块缺失相关。
+
 ```python
 >>> import _ssl
 Traceback (most recent call last):
@@ -20,7 +21,7 @@ ImportError: No module named _ssl
 
 ### Round 1
 虽然不清楚_ssl对应的是什么模块，但是感觉应该是和openssl有关系。搜索了一番，发现原来Python3.7默认的configuration里面把ssl相关的编译给注销了，需要手工取消注释。那么就重新编译吧。那么就先修改配置文件。
-在python源代码目录的 Modules/Setup.dist文件里修改
+在python源代码目录的 Modules/Setup.dist文件里修改。 ***注意socket和ssl两部分都要取消注释！***
 ```shell
 # Socket module helper for socket(2)
 _socket socketmodule.c
@@ -77,7 +78,7 @@ make install
 从网上检索相关信息，看来应该还需要将openssl编译成**动态连接库**，并替换系统默认库，才可以生效。于是继续进行操作：
 ```shell
 # 编译安装生成动态库
-./config shared zlib-dynamic
+./config shared zlib-dynamic --prefix=/usr/local/openssl
 make && make install
 
 # 备份旧的版本
@@ -91,6 +92,10 @@ ln -s /usr/local/ssl/include/openssl /usr/include/openssl
 # 建立软链（因为 /usr/local/lib64/ 读取优先级高于 /usr/lib64/）
 ln -s /usr/local/ssl/lib/libssl.so /usr/local/lib64/libssl.so
 
+# 增加依赖的动态库
+ln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/lib64/libssl.so.1.1
+ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1
+
 # 备份旧的库
 mv /usr/lib64/libssl.so /usr/lib64/libssl.so.old
 ln -s /usr/local/ssl/lib/libssl.so /usr/lib64/libssl.so
@@ -102,7 +107,49 @@ openssl version
 OpenSSL 1.0.2r  26 Feb 2019
 ```
 
-新版本openssl生效之后，再重新编译python即可。
+新版本openssl生效之后，再重新编译python前修改Python安装目录的Module/Setup文件：
+```
+#SSL=/usr/local/ssl
+#_ssl _ssl.c \
+#        -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+#        -L$(SSL)/lib -lssl -lcrypto
+```
+
+### Round4
+再次make编译之后，发现新的提示：
+```
+Could not build the ssl module!
+Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
+```
+大意是说LibreSSL版本也是太老了，二话不说，再次更新。
+```shell
+wget -c wget https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.9.1.tar.gz
+tar -xvf libressl-2.9.1.tar.gz
+cd libressl-2.9.1
+./configure && make && make install
+```
+再验证LibreSSL，确认已经更新到了目标版本：
+```shell
+#openssl version
+LibreSSL 2.9.1
+```
+
+再次尝试编译，发现问题依然在。而且通过查询，发现LibreSSL只是OpenSSL的一个分支！因此OpenSSL如果装好的话，就不用装LibreSSL。
+
+最终重新网上介绍的方法，配置LD_LIBRARY_PATH
+```
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
+sudo ldconfig
+```
+按照Round3的步骤，重新配置了环境变量和软链接，确认都替换到了openssl相关的库到最新，再尝试编译，问题解决。
+
+
+### Python 安装前的系统准备
+```shell
+yum update
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel libffi-devel gcc make
+```
 
 ### Python virtualenv pip自定义镜像源
 默认的python pip比较慢，可以通过在pip.conf自定义镜像源。默认的pip.conf在
