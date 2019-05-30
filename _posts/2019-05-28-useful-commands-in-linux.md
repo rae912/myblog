@@ -42,3 +42,4 @@ du -hsx * | sort -rh | head -10
 4.0K	lib64
 4.0K	games
 ```
+
