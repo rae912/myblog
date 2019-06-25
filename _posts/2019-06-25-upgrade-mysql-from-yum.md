@@ -3,7 +3,7 @@ layout: post
 title: "使用Yum对MySQL进行半自动升级"
 subtitle: "Upgrade MySQL with Yum"
 author: "qingshan"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/home-bg-o.jpg"
 header-mask: 0.4
 tags:
   - 工作
@@ -16,7 +16,7 @@ tags:
 ## 0. 备份老版本MySQL数据
 
 要动数据库，先无脑备份一下有备无患。
-```
+```bash
 sudo mysqldump -pparrot -p parrot > parrot.sql
 ```
 
@@ -24,26 +24,26 @@ sudo mysqldump -pparrot -p parrot > parrot.sql
 在MySQL官网找到官方提供的Yum源：
 
 引用页：
-```
+```bash
 https://dev.mysql.com/downloads/repo/yum/
 ```
 下载链接：
-```
+```bash
 wget -c https://dev.mysql.com/get/mysql80-community-release-el6-3.noarch.rpm
 ```
 安装yum源
-```
+```bash
 rpm -ivh mysql80-community-release-el6-3.noarch.rpm
 ```
 
 ## 2. 配置升级后的目标MySQL版本
-第1步中的源是中官方提供的全部版本，如果不配置就升级的话，默认安装是最新的8.0。我们暂时用不了这么新的版本，选择5.7.22即可。所以必须得先配置一下：
-```
+第1步中的源是官方能提供的全部版本，如果不配置就升级的话，默认安装是最新的8.0版本。我们暂时用不了这么新的版本，选择5.7.22即可。所以必须得先配置一下：
+```bash
 sudo vim /etc/yum.repos.d/mysql-community.repo
 ```
 
 下面配置中的`enabled`参数即是选择开关。这里打开5.7版本的enabled，关闭8.0的：
-```
+```bash
 [mysql57-community]
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
@@ -60,24 +60,24 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 ```
 
 ## 3. 开始Yum升级
-```
+```bash
 sudo yum update mysql-server
 ```
 命令执行之后，yum会将MySQL相关的组件全部扫描并升级，包括客户端，连接器等等。
 
 ## 4. 重启并完成新版本MySQL的配置
 在升级完成之后，新版本的MySQL才可以生效。我这里使用系统Service命令进行管理。
-```
+```bash
 sudo service mysqld restart
 ```
 但是此时会发现MySQL怎么也启动不起来，报错信息：
-```
+```bash
 MySQL Daemon Failed to Start 
 Starting mysqld: [failed]
 ```
 
 查看MySQL的启动脚本：
-```
+```bash
 sudo vim /etc/rc.d/init.d/mysqld
 
 $exec $MYSQLD_OPTS --datadir="$datadir" --socket="$socketfile" \
@@ -103,7 +103,7 @@ while [ $TIMEOUT -gt 0 ]; do
 done
 ```
 似乎是启动过程中的问题，导致MySQL不能拉起。查看系统日志，定位具体问题：
-```
+```bash
 sudo cat /var/log/mysqld.log
 
 Fatal error: mysql.user table is damaged. Please run mysql_upgrade
@@ -112,7 +112,7 @@ Fatal error: mysql.user table is damaged. Please run mysql_upgrade
 进行搜索之后，印证了我的猜测。于是准备先让新版本MySQL不检查权限，完成新版本MySQL的初始化再说。
 
 ## 5. 初始化新版本MySQL
-```
+```bash
 sudo vim /etc/my.cnf
 
 # 添加skip-grant-tables不检查权限
@@ -125,7 +125,7 @@ sudo service mysqld restart
 
 ## 5.1 新版本MySQL无法启动的处理办法
 如果此时新版本MySQL还是无法启动，则最有可能的原因是，原来在`/etc/my.cnf`位置的默认MySQL配置文件被新版本的数据库读取了。因为新版本的配置已经无法兼容老版本的，所以出现了这个问题。解决办法如下：
-```
+```bash
 # 重命名（或者删除）旧配置文件
 sudo /etc/my.cnf /etc/my.cnf.old
 
@@ -145,30 +145,30 @@ sudo service mysqld restart
 
 ## 6. 自动升级数据库数据
 成功拉起新版本MySQL之后，执行`mysql_upgrade`进行自动升级、修复。完成后进入直接最高权限进入MySQL查看表数据是否正确。
-```
+```bash
 sudo mysql
 # 不用密码，直接默认就是root权限
 ```
 
 刚好原来的root密码还不知道，可以用以下命令顺便修改一下root用户密码。方便下次使用。
-```
+```bash
 update user set authentication_string=password('新密码') where user='root';
 ```
 
 如果`mysql_upgrade`运行完毕后提示有错误，则可以在MySQL命令行手动导入旧数据的数据：
 
-```
+```bash
 source parrot.sql
 ```
 
 ## 7. 最后别忘了把MySQL的配置文件改回来
-```
+```bash
 # 删除skip-grant-tables不检查权限
 [mysqld]
 # skip-grant-tables
 
 # 重启MySQL生效
-sudo mysqld restart
+sudo service mysqld restart
 ```
 
 
