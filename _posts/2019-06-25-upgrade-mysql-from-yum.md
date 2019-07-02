@@ -7,6 +7,7 @@ header-img: "img/home-bg-o.jpg"
 header-mask: 0.4
 tags:
   - 工作
+  - MySQL
 ---
 
 最近因为业务需要在MySQL中建立了一张表，里面有两个“CURRENT_TIMESTAMP”字段。但是在开发环境好好的，上测试环境怎么也建立不成功了。猜测可能是MySQL版本问题。于是查了一下，发现开发环境是5.7.12，测试环境居然还是5.1的老版本。决定对测试环境的MySQL进行升级。

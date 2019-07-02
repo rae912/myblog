@@ -7,6 +7,8 @@ header-img: "img/post-bg-js-version.jpg"
 header-mask: 0.4
 tags:
   - 工作
+  - 前端
+  - Vue
 ---
 
 Vue.js等现代前端框架的`双向数据绑定`一直是开发者津津乐道的重要功能。依靠动态的数据绑定，很多控件可以轻松的实现功能。
