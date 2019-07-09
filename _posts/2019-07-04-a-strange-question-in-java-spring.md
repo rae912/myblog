@@ -7,8 +7,8 @@ header-img: "img/post-bg-halting.jpg"
 header-mask: 0.4
 tags:
   - 工作
-  - 算法
-  - LeetCode
+  - Java
+  - Spring
 ---
 
 今天spring-boot启动时候出现一个奇怪的异常：

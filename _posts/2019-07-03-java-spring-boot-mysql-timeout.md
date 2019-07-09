@@ -8,6 +8,7 @@ header-mask: 0.4
 tags:
   - 工作
   - Java
+  - Spring
 ---
 
 在Java Spring Boot添加了多个MySQL连接后，经常发现新加的MySQL报错：

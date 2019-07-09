@@ -8,6 +8,7 @@ header-mask: 0.4
 tags:
   - 工作
   - Java
+  - Spring
 ---
 
 今天使用Spring Boot对数据库做CRUD的时候，需要对结果进行排序和limit。因为ORM使用的默认Mybaits，因此查找了下资料，总结一下：
