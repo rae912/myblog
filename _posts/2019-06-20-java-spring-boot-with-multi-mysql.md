@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Java Spring Boot 配置多个MySQL源"
-subtitle: "Java Spring Boot With Multi MySQL Source"
+title: "Java Spring Boot Mybatis配置多个MySQL源"
+subtitle: "Java Spring Boot Mybatis With Multi MySQL Source"
 author: "qingshan"
 header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.4
