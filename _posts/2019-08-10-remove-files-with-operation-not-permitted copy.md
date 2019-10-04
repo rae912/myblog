@@ -10,7 +10,7 @@ tags:
   - MacOS
 ---
 
-#1 在 mac osx 下删除一个文件，却提示删除失败：Operation not permitted。
+## 1 在 mac osx 下删除一个文件，却提示删除失败：Operation not permitted。
 
 从提示上看就是没有权限删除这个文件，但用了 sudo 之后仍然是 Operation not permitted。
 
@@ -30,6 +30,6 @@ chflags nouchg zhetenga.com.txt
 
 
 
-#2 MAC上删除了一个APP，在Launchpad上还显示带问号的图标？
+## 2 MAC上删除了一个APP，在Launchpad上还显示带问号的图标？
 
 同时按住control、option、command，然后点击那个图标，图表就变成了可删除状态（带有叉叉标志），点击叉叉即可删除。
