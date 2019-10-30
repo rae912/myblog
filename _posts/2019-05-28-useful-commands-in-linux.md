@@ -50,3 +50,9 @@ du -hsx * | sort -rh | head -10
 ps -ef | grep demo.jar | grep -v grep | awk '{print $2}' | xargs --no-run-if-empty kill
 ```
 
+## 查看linux版本信息
+```bash
+1、lsb_release -a，即可列出所有版本信息：Description: CentOS release 6.5 (Final)
+2、cat /etc/redhat-release，这种方法只适合Redhat系的Linux：CentOS release 6.7 (Final)
+3、cat /etc/issue，此命令也适用于所有的Linux发行版：CentOS release 6.7 (Final)
+```

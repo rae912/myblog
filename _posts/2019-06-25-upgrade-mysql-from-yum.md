@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "使用Yum对MySQL进行半自动升级"
-subtitle: "Upgrade MySQL with Yum"
+title: "使用Yum对MySQL进行半自动升级/安装"
+subtitle: "Upgrade MySQL with Yum automatically"
 author: "qingshan"
 header-img: "img/home-bg-o.jpg"
 header-mask: 0.4
@@ -48,6 +48,8 @@ sudo vim /etc/yum.repos.d/mysql-community.repo
 [mysql57-community]
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
+# 注意如果Linux系统是7以上，上面连接要改成/el/7/
+# baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
@@ -65,6 +67,11 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 sudo yum update mysql-server
 ```
 命令执行之后，yum会将MySQL相关的组件全部扫描并升级，包括客户端，连接器等等。
+
+如果是新安装MySQL，则输入下面的命令
+```bash
+sudo yum install mysql-server
+```
 
 ## 4. 重启并完成新版本MySQL的配置
 在升级完成之后，新版本的MySQL才可以生效。我这里使用系统Service命令进行管理。
