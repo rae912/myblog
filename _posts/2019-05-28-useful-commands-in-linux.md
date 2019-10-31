@@ -56,3 +56,11 @@ ps -ef | grep demo.jar | grep -v grep | awk '{print $2}' | xargs --no-run-if-emp
 2、cat /etc/redhat-release，这种方法只适合Redhat系的Linux：CentOS release 6.7 (Final)
 3、cat /etc/issue，此命令也适用于所有的Linux发行版：CentOS release 6.7 (Final)
 ```
+
+## 查找文件/文件夹位置
+```bash
+find / -name 'tomcat7' -type d #文件夹
+find / -name '*tomcat*' # 文件 模糊查找	
+```
+
+
