@@ -1,3 +1,15 @@
+---
+layout: post
+title: "JPA报错No property found for type的问题"
+subtitle: "Solve the exception for JPA No property found for type problem"
+author: "qingshan"
+header-img: "img/post-sample-image.jpg"
+header-mask: 0.4
+tags:
+  - 工作
+  - Java
+---
+
 在 JPA 中定义完 model 和 dao 之后，JPA 会自动检索 model，然后生成 findByFieldName 的方法。
 
 例如，定义了一个字段叫 actionid，JPA 在 repository 文件里，会自动创建 findByActionid 的方法，意思是根据 actionid 这个字段来查询，获得结果。
