@@ -147,14 +147,14 @@ git --version
 fatal: Unable to find remote helper for 'http'
 ```
 
-是因为 /usr/libexec/git-core/ 或者 /usr/local/libexec/git-core 路径没在 PATH 环境变量中。设置一下就可以了：
+是因为 /usr/libexec/git-core/ 或者 /usr/local/libexec/git-core 路径没在 PATH 环境变量中。追加设置到系统环境变量/etc/profile就可以了：
 
 ```bash
 # 先确认一下git-core的位置
 #ls -a /usr/local/libexec/git-core
 
-# 正确的git-core目录下，有很多很多git-* 开头的应用程序
-PATH=$PATH:/usr/libexec/git-core
+# 正确的git-core目录下，有很多很多git-* 开头的应用程序， 追加到系统变量/etc/profile
+sudo echo 'PATH=$PATH:/usr/libexec/git-core' >> /etc/profile
 ```
 
 6.取消 runner 注册

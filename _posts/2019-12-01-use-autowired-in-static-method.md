@@ -3,7 +3,7 @@ layout: post
 title: "Java 中静态方法调用 Autowired"
 subtitle: "Use autowired in static method with Autowired"
 author: "qingshan"
-header-img: "img/post-bg-walle.jpg"
+header-img: "img/about-bg-walle.jpg"
 header-mask: 0.4
 tags:
 

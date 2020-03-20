@@ -7,6 +7,7 @@ header-img: "img/post-sample-image.jpg"
 header-mask: 0.4
 tags:
   - 工作
+  - MySQL
 ---
 
 最近工作上开发环境需要与其他环境交换测试数据。写好程序后，死活连不上开发机。反复折腾配置环境、防火墙、网络之后，总算发现原来是MacOS上brew的锅！
