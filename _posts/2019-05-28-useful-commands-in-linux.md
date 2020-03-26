@@ -25,6 +25,15 @@ tcp        0      0 ::ffff:127.0.0.1:8082       ::ffff:127.0.0.1:50254      ESTA
 tcp        0      0 ::ffff:127.0.0.1:8082       ::ffff:127.0.0.1:51501      ESTABLISHED 12670/node
 ```
 
+```bash
+lsof -i:8081
+```
+回显：
+```bash
+COMMAND   PID USER   FD   TYPE     DEVICE SIZE/OFF NODE NAME
+java    40168 apps   16u  IPv4 1472358374      0t0  TCP *:tproxy (LISTEN)
+```
+
 ## 查看某个目录下的文件占用排行
 ```bash
 cd /path/to/some/where

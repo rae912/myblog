@@ -154,7 +154,7 @@ fatal: Unable to find remote helper for 'http'
 #ls -a /usr/local/libexec/git-core
 
 # 正确的git-core目录下，有很多很多git-* 开头的应用程序， 追加到系统变量/etc/profile
-sudo echo 'PATH=$PATH:/usr/libexec/git-core' >> /etc/profile
+sudo echo 'PATH=$PATH:/usr/local/libexec/git-core' | sudo tee -a /etc/profile
 ```
 
 6.取消 runner 注册
@@ -172,3 +172,37 @@ When a build for GitLab CI is triggered, it will execute jobs listed in the .git
 ```
 
 翻译成人话，就是每个job只会随机的运行在第一个被发现满足要求的runner上。如果要批量运行同一个任务，就必须创建多个任务，指定不同的runner。于是只能很二地将一个job复制N次，然后每个job指定不同的tags，问题解决。感觉这样很不优雅，不知道有没有更优雅的方式？
+
+8. Docker下日志清理
+Gitlab docker运行一段时间后，发现磁盘空间费得很快，经过排查，是docker的日志占用了，日志位置在下面，要root权限才可以看到：
+```bash
+# root user
+cd /var/lib/docker/container/
+du -h --max-depth 1
+```
+
+解决方法： 配置docker deamon.json，限制docker产生的日志量
+```bash
+# vim /etc/docker/deamon.json
+/etc/docker/daemon.json file:
+
+{
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "100m", "max-file": "3"}
+}
+```
+
+然后reload和重启：  
+
+```bash
+# Flush changes:
+sudo systemctl daemon-reload
+
+# Restart
+sudo systemctl restart docker
+```
+
+*注意！！！* 新的deamon.json仅对新的容器有效。所以必要时需要重新生成容器。
+
+# 参考资料：
+1. https://docs.docker.com/config/daemon/systemd/
