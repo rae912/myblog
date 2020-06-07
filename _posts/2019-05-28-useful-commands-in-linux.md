@@ -72,4 +72,68 @@ find / -name 'tomcat7' -type d #文件夹
 find / -name '*tomcat*' # 文件 模糊查找	
 ```
 
+## 根据关键字扫描和查找整个文件夹下的日志文件
+```bash
+grep -r -E "WARN|ERROR" /var/log/
+```
 
+## 根据关键字杀死进程(不好用，即使杀掉了也会报错)
+```bash
+sudo kill -s 9 `ps -aux | grep nodemanager | awk '{print $2}'`
+```
+
+## 查看CPU核数
+```bash
+# 总核数 = 物理CPU个数 X 每颗物理CPU的核数 
+# 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
+
+# 查看物理CPU个数
+cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+
+# 查看每个物理CPU中core的个数(即核数)
+cat /proc/cpuinfo| grep "cpu cores"| uniq
+
+# 查看逻辑CPU的个数
+cat /proc/cpuinfo| grep "processor"| wc -l
+```
+
+## 删除指定日期前的文件
+```bash
+显示20分钟前的文件
+find /home/prestat/bills/test -type f -mmin +20 -exec ls -l {} \;
+
+删除20分钟前的文件
+find /home/prestat/bills/test -type f -mmin +20 -exec rm {} \;
+
+显示20天前的文件
+find /home/prestat/bills/test -type f -mtime +20 -exec ls -l {} \;
+
+删除20天前的文件
+find /home/prestat/bills/test -type f -mtime +20 -exec rm {} \;
+```
+
+## 显示各文件夹的大小（当前文件夹下各文件夹的大小）
+```
+du -h --max-depth=1
+```
+
+## 显示总大小（/下全部文件占用大小）
+```
+du -sh /* | sort -nr
+```
+
+## systemctl 配置文件在 /etc/systemd/system/nodemanager.service 修改后，必须执行`sudo systemctl daemon-reload`才可生效
+```bash
+sudo systemctl daemon-reload
+sudo systemctl stop nodemanager
+sudo systemctl start nodemanager
+```
+
+## linux sed 批量替换多个文件中的字符串
+```bash
+sed -i "s/oldstring/newstring/g" `grep oldstring -rl yourdir`
+
+ # 例如：替换/home下所有文件中的www.bcak.com.cn为bcak.com.cn
+
+sed -i "s/www.bcak.com.cn/bcak.com.cn/g" `grep www.bcak.com.cn -rl /home
+```

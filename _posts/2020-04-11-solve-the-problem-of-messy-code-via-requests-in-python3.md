@@ -8,7 +8,7 @@ header-mask: 0.4
 tags:
 
 - 工作
-- Java
+- Python
 
 ---
 
