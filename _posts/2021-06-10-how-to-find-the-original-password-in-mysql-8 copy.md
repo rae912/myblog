@@ -6,7 +6,7 @@ author: "qingshan"
 header-img: "img/about-bg-walle.jpg"
 header-mask: 0.4
 tags:
-  - Mysql
+  - MySQL
   - Linux
 
 ---

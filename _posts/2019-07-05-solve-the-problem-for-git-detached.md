@@ -7,7 +7,7 @@ header-img: "img/post-bg-product-manager.webp"
 header-mask: 0.4
 tags:
   - 工作
-  - git
+  - Git
 ---
 
 Git HEAD detached from XXX (git HEAD 游离) 问题：

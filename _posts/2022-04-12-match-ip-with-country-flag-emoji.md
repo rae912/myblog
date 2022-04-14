@@ -84,8 +84,8 @@ response
 ```
 
 然后配合上一个一个 CountryCode to CountryFlag 的字典，这事就成了。
-字典Link: https://github.com/rae912/ClashSubscribeIntegrate/blob/main/country_emoji_data.py
+字典Link: <https://github.com/rae912/ClashSubscribeIntegrate/blob/main/country_emoji_data.py>
 
 
 ## 完整的项目Link
-https://github.com/rae912/ClashSubscribeIntegrate
+<https://github.com/rae912/ClashSubscribeIntegrate>
