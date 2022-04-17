@@ -130,12 +130,16 @@ def mergeSort(nums):
     # 归并的过程
     i = j = k = 0
     while i < len(L) and j < len(R):
+        # 如果 L[i] 小于等于R[j]，表示有序，不用换位
+        # 如果有重复的数字，那么等号不能省
         if L[i] <= R[j]:
             nums[k] = L[i]
             k += 1
             i += 1
         else:
+        # 否则表示需要更换数字位置
             nums[k] = R[j]
+            # len(L) - i 表示本次交换的数字次数，也即是逆序对
             ans += len(L) - i
             k += 1
             j += 1
@@ -147,18 +151,20 @@ def mergeSort(nums):
         nums[k] = R[j]
         k += 1
         j += 1
+
+    # 这里 ans 是交换过的次数，也即是题意中逆序对的数量
     return ans
 
 
 def main():
-    n = int(input())
-    
-    nums = list(map(int, input().split()))
-    
+    nums = [88,71,16,2,72,38,94,50,72,67]
+    # nums = [10,0,6,4,3,2,9,7,8,1,11]
     print(mergeSort(nums))
+    print(nums)
 
 
 if __name__ == "__main__":
     main()
+
 
 ```
