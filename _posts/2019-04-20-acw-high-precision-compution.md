@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "高精度运算：加减乘除"
+title: "ACW04-高精度运算：加减乘除"
 subtitle: "The High Precision Compution"
 author: "qingshan"
 header-img: "img/post-bg-css.jpg"
