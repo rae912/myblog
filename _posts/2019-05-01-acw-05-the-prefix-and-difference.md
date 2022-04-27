@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ACW05-前缀和与差分"
-subtitle: "The prefix and difference"
+subtitle: "ACW Practice 05: The prefix and difference"
 author: "qingshan"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.4

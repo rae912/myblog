@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ACW04-高精度运算：加减乘除"
-subtitle: "The High Precision Compution"
+subtitle: "ACW Practice 04: The High Precision Compution"
 author: "qingshan"
 header-img: "img/post-bg-css.jpg"
 header-mask: 0.4

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ACW18 trie树：835. Trie字符串统计"
+title: "ACW18-trie树：835. Trie字符串统计"
 subtitle: "The trie tree"
 author: "qingshan"
 header-img: "img/home-bg-o.jpg"

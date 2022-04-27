@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ACW19 并查集19： 836. 合并集合"
+title: "ACW19-并查集: 836. 合并集合"
 subtitle: "The set merge"
 author: "qingshan"
 header-img: "img/home-bg-o.jpg"
@@ -71,7 +71,7 @@ class trie(object):
         # 意思就是将 a 值的祖先节点，指向 b 的祖先节点。
         # 两个值有同一个祖先节点，说明就是在同一个集合
         self.p[self.find(a)] = self.find(b)
-        
+
 
 def main():
     n, m = list(map(int, input().split()))

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ACW06-双指针算法"
-subtitle: "The double index"
+subtitle: "ACW Practice 06: The double index"
 author: "qingshan"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.4
