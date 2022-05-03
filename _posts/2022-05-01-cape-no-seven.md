@@ -3,7 +3,7 @@ layout: post
 title: "海角七号--七封情书"
 subtitle: "Cape No.7: 7 love letters"
 author: "qingshan"
-header-img: "img/about-bg-walle.jpg"
+header-img: "img/in-post/post-cape_no_7_header.jpg"
 header-mask: 0.4
 tags:
 
@@ -14,6 +14,10 @@ tags:
 
 
 # 海角七号：七封情书（中、日文对照）
+
+> 劳动节假期，因为疫情管控政策，只能待在家。方总提议一起看电影，我果断力荐这部。自从 08 年看了之后，时常萦绕在脑海中。这次重温，又唤起了久违的记忆。
+
+![](../img/in-post/post-cape_no_7_1.jpg)
 
 ## ●第一封信
 
