@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ACW19 并查集20： 837. 连通块中点的数量"
+title: "ACW19 并查集2： 837. 连通块中点的数量"
 subtitle: "The set merge 02"
 author: "qingshan"
 header-img: "img/home-bg-o.jpg"
