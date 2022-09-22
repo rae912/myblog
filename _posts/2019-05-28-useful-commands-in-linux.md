@@ -53,6 +53,12 @@ du -hsx * | sort -rh | head -10
 4.0K	games
 ```
 
+## 查找大文件
+```
+# 查找当前目录大于100M 的文件
+find . -type f -size +100M
+```
+
 ## 根据进程名字模糊匹配kill进程
 ```bash
 # 先通过ps将进程ID得到，然后再kill。并在这条命令上加个判断，如果存在则运行kill，不存在则不执行kill。
